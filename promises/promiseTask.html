@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      // 1. Create a new Promise that resolves with the value "Hello, World!".
+
+      // 2. Create a new Promise that rejects with the value "Error occurred".
+
+      // 3. Write a Promise that resolves after 2 seconds with the value "Resolved!".
+
+      // 4. Write a Promise that rejects after 1 second with the value "Rejected!".
+
+      // 5. Create a Promise that resolves with a given value and log the resolved value using .then().
+
+      // 6. Create a Promise that rejects with a given value and handle the rejection using .catch().
+
+      // 7. Write a Promise that resolves with the value "Hello, World!" and logs "Promise Resolved!" after it resolves.
+
+      // 8. Write a function that returns a resolved Promise with a given message.
+
+      // 9. Write a function that returns a rejected Promise with a given error message.
+
+      // 10. Create a Promise that resolves after 3 seconds and logs the value "3 seconds passed".
+
+      // 11. Chain two Promises together where the second Promise resolves with the value of the first Promise plus " and then some".
+
+      //   function promise11() {
+      //     return new Promise((resolve, reject) => {
+      //       resolve('q11');
+      //     });
+      //   }
+      //   promise11()
+      //     .then((value1) => {
+      //       return new Promise((resolve, reject) => {
+      //         resolve(value1 + 'and then some');
+      //       });
+      //     })
+      //     .then((value2) => {
+      //       console.log(value2);
+      //     });
+
+      // 12. Write a Promise that resolves with an array of numbers and logs the sum of those numbers using .then().
+
+      //   option1
+
+      // function promise12() {
+      //   return new Promise((resolve, reject) => {
+      //     resolve([10, 100, 1000]);
+      //   });
+      // }
+      // promise12().then((arr) => {
+      //  const sum = 0;
+      //   arr.forEach((number) => {
+      //     sum += number;
+      //   });
+      //   console.log(sum);
+      // });
+
+      // option2
+
+      //   function promise12() {
+      //     return new Promise((resolve, reject) => {
+      //       resolve([10, 100, 1000]);
+      //     });
+      //   }
+
+      //   promise12()
+      //     .then((arr) => {
+      //       return arr.reduce((total, currentValue) => {
+      //         return total + currentValue;
+      //       }, 7);
+      //     })
+      //     .then((value) => {
+      //       console.log(value);
+      //     });
+
+      // 13. Create a Promise that rejects if a given number is less than 10 and resolves if it's 10 or greater.
+
+      //   function promise13(number) {
+      //     return new Promise((resolve, reject) => {
+      //       if (number >= 10) {
+      //         resolve('big num');
+      //       } else reject('small num');
+      //     });
+      //   }
+
+      //   promise13(11)
+      //     .then((result) => console.log(result))
+      //     .catch((message) => console.log(message));
+
+      // 14. Write a function that returns a Promise which resolves after a given number of milliseconds.
+
+      //   function promise14(milliseconds) {
+      //     return new Promise((resolve, reject) => {
+      //       setTimeout(() => {
+      //         resolve('resolved');
+      //       }, milliseconds);
+      //     });
+      //   }
+
+      //   promise14(2000).then((message) => {
+      //     console.log(message);
+      //   });
+
+      // 15. Write a Promise that resolves with the current date and time.
+
+      // new Promise((resolve, reject) => {
+      //   resolve(new Date());
+      // }).then((date) => console.log(date.toDateString()));
+
+      // 16. Use Promise.all() to wait for two Promises to resolve and then log their results.
+
+      // const promise1 = new Promise((resolve, reject) => {
+      //   resolve('1');
+      // });
+
+      // const promise2 = new Promise((resolve, reject) => {
+      //   resolve('2');
+      // });
+
+      // Promise.all([promise1, promise2]).then((x) => {
+      //   console.log(x);
+      // });
+
+      // 17. Create a Promise that resolves with a user's name and another that resolves with the user's age. Use Promise.all() to wait for both and then log a message "Name: [name], Age: [age]".
+
+      // function q17(name, age) {
+      //   const promise1 = new Promise((resolve, reject) => {
+      //     resolve(name);
+      //   });
+      //   const promise2 = new Promise((resolve, reject) => {
+      //     resolve(age);
+      //   });
+
+      //   return Promise.all([promise1, promise2]);
+      // }
+
+      // q17('yoav', '26').then((array) => {
+      //   console.log(`Name: ${array[0]}, Age: ${array[1]}`);
+      // });
+
+      // 18. Write a function that returns a Promise which resolves with a random number after 1 second.
+
+      // function randomPromise() {
+      //   return new Promise((resolve, reject) => {
+      //     setTimeout(() => {
+      //       resolve(Math.floor(Math.random() * 1000000));
+      //     }, 1000);
+      //   });
+      // }
+
+      // randomPromise().then((number) => {
+      //   console.log(number);
+      // });
+
+      // 19. Create a Promise that rejects with a specific error message and handle it using .catch() and log the error.
+
+      // const promise1 = new Promise((resolve, reject) => {
+      //   reject('error');
+      // });
+
+      // promise1.catch((message) => {
+      //   console.log(message);
+      // });
+
+      // 20. Write a Promise that resolves with "Success!" and logs "Operation was successful!" using .then().
+
+      // repeat on himself
+
+      // 21. Write a Promise that resolves with "Done!" and always logs "Finished!" using .finally().
+
+      // const promise1 = new Promise((resolve, reject) => {
+      //   const flag = true;
+      //   if (flag) {
+      //     resolve('done!');
+      //   } else {
+      //     reject('undone!!!');
+      //   }
+      // })
+      //   .then((message) => {
+      //     console.log(message);
+      //   })
+      //   .catch((badMessage) => {
+      //     console.log(badMessage);
+      //   })
+      //   .finally(() => {
+      //     console.log('Finished!');
+      //   });
+
+      // 22. Write a function that returns a Promise which resolves with "Data received" after simulating a 2-second network request using setTimeout.
+
+      // repeat on himself
+
+      // 23. Write a function that uses Promise.all() to wait for three Promises that resolve with different values and logs all the values once all Promises are resolved.
+
+      // function q23(firstVal, secondVal, thirdVal) {
+      //   const Promise1 = new Promise((resolve, reject) => {
+      //     setTimeout(() => {
+      //       resolve(firstVal);
+      //     }, 5000);
+      //   });
+      //   const Promise2 = new Promise((resolve, reject) => {
+      //     resolve(secondVal);
+      //   });
+      //   const Promise3 = new Promise((resolve, reject) => {
+      //     setTimeout(() => {
+      //       resolve(thirdVal);
+      //     }, 100);
+      //   });
+      //   return Promise.all([Promise1, Promise2, Promise3]);
+      // }
+
+      // q23('firstVal', 'secondVal', 'thirdVal').then((arrValues) => {
+      //   arrValues.forEach((value) => {
+      //     console.log(value);
+      //   });
+      // });
+
+      // 24. Write a function that returns a Promise which rejects if a given string is empty and resolves if it is not empty.
+
+      // function checkStringLength(string) {
+      //   return new Promise((resolve, reject) => {
+      //     if (string.length > 0) {
+      //       resolve(string.length);
+      //     } else {
+      //       reject('empty');
+      //     }
+      //   });
+      // }
+
+      // checkStringLength('hi')
+      //   .then((stringLength) => {
+      //     console.log(stringLength);
+      //   })
+      //   .catch((message) => {
+      //     console.log(message);
+      //   });
+
+      // 25. Write a Promise that resolves with the square of a given number.
+
+      // repeat on himself
+
+      // 26. Create a Promise that resolves with the value of a given number multiplied by 2 after 2 seconds.
+
+      // repeat on himself
+
+      // 27. Write a function that returns a Promise which resolves with a greeting message for a given name.
+
+      // repeat on himself
+
+      // 28. Write a Promise that resolves with "File downloaded" after simulating a file download with setTimeout.
+
+      // repeat on himself
+
+      // 29. Write a Promise that rejects with "Network error" if a given boolean is false and resolves with "Network success" if true.
+
+      // repeat on himself
+
+      // 30. Write a function that returns a Promise which resolves with "API call successful" after simulating an API call with setTimeout.
+
+      // repeat on himself
+    </script>
+  </body>
+</html>
